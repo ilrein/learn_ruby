@@ -10,47 +10,47 @@ require "temperature.rb"
 # The string should describe what is being tested in the do-end block. 
 describe "temperature conversion functions" do
 
-  describe "#ftoc" do
+  describe "convert" do
 
     # "it" is also a method that is given to us by RSpec,
     # that also takes a string and a do-end block.
     it "converts freezing temperature" do
       # Calling the method ftoc and passing in the integer 32 should return 0.
-      ftoc(32).should == 0
+      convert(32).should == 0
     end
 
     # The next three tests are similar, except different numbers are being passed in. 
     it "converts boiling temperature" do
-      ftoc(212).should == 100
+      convert(212).should == 100
     end
 
     it "converts body temperature" do
-      ftoc(98.6).should == 37
+      convert(98.6).should == 37
     end
 
     it "converts arbitrary temperature" do
-      ftoc(68).should == 20
+      convert(68).should == 20
     end
 
   end
 
   # Now this set of tests describes a different method, 
   # not ftoc() anymore, but ctof(). 
-  describe "#ctof" do
+  # describe "#ctof" do
 
-    it "converts freezing temperature" do
-      ctof(0).should == 32
-    end
+  #   it "converts freezing temperature" do
+  #     ctof(0).should == 32
+  #   end
 
-    it "converts boiling temperature" do
-      ctof(100).should == 212
-    end
+  #   it "converts boiling temperature" do
+  #     ctof(100).should == 212
+  #   end
 
-    it "converts arbitrary temperature" do
-      ctof(20).should == 68
-    end
+  #   it "converts arbitrary temperature" do
+  #     ctof(20).should == 68
+  #   end
 
-  end
+  # end
 
 end
 
